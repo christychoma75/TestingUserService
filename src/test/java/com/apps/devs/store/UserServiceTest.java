@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserServiceTest {
+
     @DisplayName("User Object created.")
     @Test
     void testCreateUser_whenUserDetailsProvided_returnUserObject(){
@@ -28,6 +29,7 @@ public class UserServiceTest {
         assertEquals(firstName, user.getFirstName(), "User firstName is incorrect");
         assertEquals(lastName, user.getLastName(),"User lastName is incorrect");
         assertEquals(email, user.getEmail(),"User email is incorrect");
-
+        assertNotNull(user.getId(), "User Id is missing");
     }
+
 }
